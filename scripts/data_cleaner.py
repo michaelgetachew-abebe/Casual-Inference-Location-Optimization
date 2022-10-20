@@ -101,6 +101,12 @@ class DataCleaner:
             print("Method unknown")
             return df
 
+    def drop_columns(self,df,columns:list)->pd.DataFrame:
+        """
+        drops unwanted columns in the dataframe
+        """
+        return df.drop(columns=columns)
+
     def fill_missing_values_numeric(self, df: pd.DataFrame, method: str,columns: list =None) -> pd.DataFrame:
         """
         fill missing values with specified method
